@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './products/product-list.component';
 import { ConvertToSpacePipe } from './shared/convert-to-space.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,10 +6,14 @@
     <div class="card-body">
         
         <div class="row my-3">
-            <div class="col-md-2">Filter by:</div>
-            <div class="col-md-6">
-                <input class="search-input" type="text" [(ngModel)]="listFilter">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <mat-form-field class="search-input" appearance="fill">
+                    <mat-label>Search</mat-label>
+                    <input matInput placeholder="Search for products" value="" [(ngModel)]="listFilter">
+                </mat-form-field>
             </div>
+            <div class="col-md-2"></div>
         </div>
         
         <div class="row my-4">
@@ -24,9 +28,7 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class="btn btn-primary" (click)="toggleImage()">
-                            {{ showImage ? 'Hide' : 'Show'}} Image
-                            </button>
+                            <button mat-raised-button color="primary" (click)="toggleImage()">{{ showImage ? 'Hide' : 'Show' }} Image</button>
                         </th>
                         <th>Product</th>
                         <th>Code</th>
@@ -53,7 +55,6 @@
                 </tbody>
 
             </table>
-
         </div>
     </div>
 </div>
