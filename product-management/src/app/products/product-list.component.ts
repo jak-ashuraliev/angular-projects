@@ -58,7 +58,7 @@ export class ProductListComponent implements OnInit {
       "productDate": "June 20, 2022",
       "productDescription": "Some description",
       "productPrice": 649.99,
-      "productRating": 3.9,
+      "productRating": 2.5,
       "productImageUrl": "assets/lg-wing.png"
     },
     {
@@ -68,7 +68,7 @@ export class ProductListComponent implements OnInit {
       "productDate": "June 11, 2022",
       "productDescription": "Some description",
       "productPrice": 799.99,
-      "productRating": 4.5,
+      "productRating": 3.5,
       "productImageUrl": "assets/iphone.png"
     },
     {
@@ -78,7 +78,7 @@ export class ProductListComponent implements OnInit {
       "productDate": "March 10, 2022",
       "productDescription": "Some description",
       "productPrice": 629.99,
-      "productRating": 4.2,
+      "productRating": 2.5,
       "productImageUrl": "assets/samsungA70.png"
     },
     {
@@ -88,7 +88,7 @@ export class ProductListComponent implements OnInit {
       "productDate": "June 20, 2022",
       "productDescription": "Some description",
       "productPrice": 559.99,
-      "productRating": 3.9,
+      "productRating": 4.0,
       "productImageUrl": "assets/lg-wing.png"
     },
   ];
@@ -109,4 +109,9 @@ export class ProductListComponent implements OnInit {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) => product.productName.toLocaleLowerCase().includes(filterBy));
   }
+
+  onRatingClicked(message: string): void {
+    this.productTitle = 'Product List: ' + message;
+  }
+
 }
